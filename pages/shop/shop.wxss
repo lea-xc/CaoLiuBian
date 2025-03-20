@@ -1,0 +1,119 @@
+/* pages/shop/shop.wxss */
+.top-header {
+    height: 120rpx;
+    padding: 0 30rpx;
+    background: linear-gradient(to bottom, #e8f5e9, #fff);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .green-circle {
+    width: 40rpx;
+    height: 40rpx;
+    border-radius: 50%;
+    background-color: #09b367;
+    margin-right: 15rpx;
+  }
+  
+  .title {
+    color: #1b5e20;
+    font-size: 34rpx;
+    font-weight: bold;
+  }
+  
+  .banner {
+    height: 300rpx;
+    margin: 20rpx 30rpx;
+    background: linear-gradient(to bottom, #fff9c4, #fff);
+    border-radius: 20rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .banner text {
+    font-size: 48rpx;
+    color: #333;
+  }
+  
+  .section-title {
+    color: #1b5e20;
+    font-size: 32rpx;
+    font-weight: bold;
+    margin: 30rpx;
+    display: block;
+  }
+  
+  .category-icons {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 30rpx;
+  }
+  
+  .icon-square {
+    width: 120rpx;
+    height: 120rpx;
+    background-color: #09b367;
+    border-radius: 15rpx;
+  }
+  
+  .image-container {
+    height: 400rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .image-item {
+    position: absolute;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-radius: 20rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    box-shadow: 0 10rpx 30rpx rgba(0,0,0,0.1);
+    
+    /* 默认大小 */
+    width: 450rpx;
+    height: 300rpx;
+    transform-origin: center center;
+  }
+  
+  .image-item.active {
+    /* 中间图片大小 */
+    width: 450rpx;
+    height: 300rpx;
+    transform: translateX(0) !important;
+    filter: none;
+  }
+  
+  .image-item:not(.active) {
+    filter: blur(8rpx) brightness(0.9);
+    opacity: 0.9;
+    width: 315rpx;
+    height: 210rpx;
+  }
+  
+  .sale-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 30rpx;
+  }
+  
+  .sale-item {
+    width: 330rpx;
+    height: 200rpx;
+    background-color: #e8f5e9;
+    border-radius: 20rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

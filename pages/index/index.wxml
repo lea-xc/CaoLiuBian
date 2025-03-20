@@ -1,0 +1,60 @@
+<!-- pages/index/index.wxml -->
+<view class="container">
+  <!-- 顶部区域 -->
+  <view class="header">
+    <view class="left-header">
+      <view class="green-circle"></view>
+      <text class="title">柳韵乡情</text>
+    </view>
+    <icon type="user" size="25" color="#09b367"/>
+  </view>
+
+  <!-- 搜索栏 -->
+  <view class="search-bar">
+  <view class="search-input">
+    <icon type="search" size="32rpx" color="#999"/>
+    <input 
+      class="search-input-field"
+      placeholder="什么是草柳编"
+      placeholder-style="color: #999;font-size:28rpx"
+      value="{{searchValue}}"
+      bindinput="handleInput"
+      bindconfirm="handleSearch"
+      confirm-type="search"
+    />
+    <!-- 工具图标部 -->
+    <view class="inline-tools">
+      <icon type="voice" size="36rpx" color="#09b367"/>
+      <icon type="camera" size="36rpx" color="#09b367"/>
+    </view>
+  </view>
+  
+  <button 
+    class="search-btn" 
+    bindtap="handleSearch"
+    hover-class="none"
+  >搜索</button>
+</view>
+
+  <!-- 功能分区 -->
+  <view class="function-area">
+    <view class="section">
+      <text class="section-title">非遗文化展示区</text>
+      <view class="content-placeholder"></view>
+    </view>
+    
+    <view class="section">
+      <text class="section-title">非遗商品销售区</text>
+      <navigator url="/pages/shop/shop" open-type="switchTab">
+        <view class="content-placeholder">
+        </view>
+      </navigator>
+
+    </view>
+    
+    <view class="section">
+      <text class="section-title">互动体验区</text>
+      <view class="content-placeholder"></view>
+    </view>
+  </view>
+</view>

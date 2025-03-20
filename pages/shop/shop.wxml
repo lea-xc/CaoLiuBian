@@ -1,0 +1,54 @@
+<!-- pages/shop/shop.wxml -->
+<view class="container">
+  <!-- 顶部区域 -->
+  <view class="top-header">
+    <view class="header-left">
+      <view class="green-circle"></view>
+      <text class="title">非遗商品销售区</text>
+    </view>
+    <icon type="user" size="25" color="#09b367"/>
+  </view>
+
+  <!-- Banner -->
+  <view class="banner">
+    <text>BANNER</text>
+  </view>
+
+  <!-- 分类导航 -->
+  <view class="category">
+    <text class="section-title">分类导航</text>
+    <view class="category-icons">
+      <view class="icon-square" wx:for="{{4}}" wx:key="index"></view>
+    </view>
+  </view>
+
+  <!-- 热门推荐 -->
+  <view class="hot-recommend">
+  <text class="section-title">热门推荐</text>
+  <view class="image-container">
+    <view 
+      class="image-item {{index === currentIndex ? 'active' : ''}}"
+      style="background-color: {{item.color}}; z-index: {{index === currentIndex ? 3 : (currentIndex + 1) % 3 === index ? 2 : 1}}; transform: {{(index - currentIndex + 3) % 3 === 0 ? 'translateX(0) scale(1)' :(index - currentIndex + 3) % 3 === 1 ? 'translateX(40%) scale(1)' : 'translateX(-40%) scale(1)'}};"
+      wx:for="{{imageList}}"
+      wx:key="index"
+      data-index="{{index}}"
+      bindtap="switchImage"
+    >
+      <text wx:if="{{index === currentIndex}}">商品图{{index + 1}}</text>
+    </view>
+  </view>
+</view>
+
+  <!-- 爆款推荐 -->
+  <view class="hot-sale">
+    <text class="section-title">爆款推荐</text>
+    <view class="sale-container">
+      <view class="sale-item">
+        <text>商品图</text>
+      </view>
+      <view class="sale-item">
+        <text>文字卡片</text>
+      </view>
+    </view>
+  </view>
+</view>
