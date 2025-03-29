@@ -5,7 +5,15 @@
     "pages/person/person",
     "pages/road/road",
     "pages/DIY/DIY",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/detail/madahu/madahu",
+    "pages/detail/bowuguan/bowuguan",
+    "pages/detail/xingguosi/xingguosi",
+    "pages/detail/senlingongyuan/senlingongyuan",
+    "pages/detail/gongfang/gongfang",
+    "pages/detail/wenhuachanyeyuan/wenhuachanyeyuan",
+    "pages/detail/jidi/jidi",
+    "pages/detail/shiji/shiji"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -35,6 +43,11 @@
         "text": "DIY"
       }
     ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "申请获取位置信息"
+    }
   },
   "style": "v2",
   "componentFramework": "glass-easel",
