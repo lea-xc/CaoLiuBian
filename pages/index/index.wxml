@@ -51,10 +51,15 @@
       </navigator>
 
     </view>
-    
+        
     <view class="section">
       <text class="section-title">互动体验区</text>
-      <view class="content-placeholder"></view>
+      <navigator url="/pages/DIY/DIY" open-type="switchTab">
+        <view class="content-placeholder">
+        </view>
+      </navigator>
+
     </view>
+
   </view>
 </view>

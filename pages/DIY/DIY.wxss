@@ -1,1 +1,159 @@
 /* pages/DIY/DIY.wxss */
+.diy-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: white
+}
+
+/* 头部固定 */
+.header {
+  position: fixed;   /* 关键属性 */
+  top: 0;            /* 贴顶 */
+  left: 0;           /* 贴左 */
+  width: 100%;       /* 全宽 */
+  z-index: 999;      /* 确保层级最高 */
+  background: linear-gradient(
+    to bottom,       /* 或使用 180deg */
+    #e8f5e9 0%,      /* 顶部浅绿 */
+    #ffffff 100%     /* 底部纯白 */
+  );
+  padding: 30rpx 0;  /* 保持原有内边距 */
+  display: flex;          /* 新增 */
+  justify-content: center; /* 新增 */
+}
+
+.title {
+  font-size: 44rpx;
+  font-weight: bold;
+  background: linear-gradient(45deg, #94df82, #95c98e);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 4rpx 12rpx rgba(18, 29, 18, 0.3);
+  
+  padding: 0 20rpx;       /* 左右留白 */
+  letter-spacing: 2rpx;   /* 字间距微调 */
+}
+/* 添加下划线装饰 */
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -10rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80rpx;
+  height: 6rpx;
+  background: #4CAF50;
+  border-radius: 3rpx;
+}
+
+/* 消息区域 */
+.message-area {
+  flex: 1;
+  padding: 20rpx 50rpx 20rpx 30rpx !important; 
+  padding-top: 120rpx !important; /* 根据header高度调整 */
+  padding-bottom: 160rpx !important; /* 根据输入框高度调整 */
+}
+
+/* 通用消息样式 */
+.message {
+  margin: 30rpx 0;
+  display: flex;
+}
+
+/* 用户消息 */
+.user-msg {
+  flex-direction: column;/* 改为纵向排列 */
+  padding-right: 50rpx; /*补偿抵消的负边距*/
+}
+.user-msg .bubble {
+  background: #4CAF50;
+  color: white;
+  border-radius: 24rpx 24rpx 4rpx 24rpx;
+ 
+  word-break: break-word; /*长文本自动换行*/
+  white-space: pre-wrap;   /* 保留空格换行，同时允许自动换行*/
+  margin-left: auto; /* 气泡右对齐 */
+  display: block; /* 覆盖flex布局影响 */
+}
+.user-msg .time {
+  text-align: right; /* 时间右对齐 */
+  width: 100%; /* 确保时间不溢出 */
+  padding-right: 50rpx; /* 右侧留空 */
+}
+
+/* AI消息 */
+.ai-msg {
+  display: flex;
+  align-items: flex-start; /* 头像与气泡顶部对齐 */
+}
+.ai-msg .avatar {
+  width: 80rpx !important; /* 强制固定宽度 */
+  height: 80rpx !important;
+  flex-shrink: 0; /* 禁止缩放 */
+  margin-right: 10rpx;
+}
+.ai-msg .bubble {
+  background: white;
+  border-radius: 24rpx 24rpx 24rpx 4rpx;
+  max-width: calc(100% - 100rpx); /* 总宽度-头像相关空间 */
+  flex-shrink: 1;                 /* 允许气泡收缩 */
+  margin-right: 50rpx;            /* 右侧留空距离加倍 */
+  margin-left: 10rpx;
+  word-break: break-word;
+}
+
+/* 气泡通用样式 */
+.bubble {
+  padding: 20rpx 28rpx;
+  font-size: 28rpx;
+  line-height: 1.5;
+  max-width: 600rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.05);
+  word-break: break-word;
+}
+
+/* 时间样式 */
+.time {
+  color: #999;
+  font-size: 24rpx;
+  margin-top: 12rpx;
+  padding: 0 10rpx;
+}
+
+/* 输入区样式 */
+.input-box {
+  position: fixed !important;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: white;
+  border-top: 1rpx solid #eee;
+
+  padding: 20rpx 30rpx;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box; 
+}
+.input {
+  flex: 1;
+  /* margin-right: 20rpx; */
+  padding: 16rpx 24rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+  margin: 0; 
+}
+
+/* 发送按钮（选用） */
+/* .send-btn {
+  margin: 0;
+  padding: 0 40rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  background: #4CAF50;
+  color: white;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+} */

@@ -117,3 +117,17 @@
     justify-content: center;
     align-items: center;
   }
+
+  /* 顶部标题 */
+.header {
+  padding: 24rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #eee;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}

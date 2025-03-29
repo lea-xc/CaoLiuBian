@@ -1,2 +1,60 @@
-<!--pages/DIY/DIY.wxml-->
-<text>pages/DIY/DIY.wxml</text>
+<!-- pages/DIY/DIY.wxml -->
+<view class="diy-container">
+  <!-- 顶部标题 -->
+  <view class="header">
+    <view class="title">互动体验区</view>
+  </view>
+
+  <!-- 消息展示区 -->
+  <scroll-view 
+    scroll-y 
+    class="message-area" 
+    scroll-into-view="{{'msg-' + (messages.length-1)}}"
+  >
+    <block wx:for="{{messages}}" wx:key="index">
+      <!-- 用户消息 -->
+      <view 
+        wx:if="{{item.role === 'user'}}" 
+        class="message user-msg" 
+        id="msg-{{index}}"
+      >
+        <view class="bubble">{{item.content}}</view>
+        <view class="time">{{item.time}}</view>
+      </view>
+
+      <!-- AI消息 -->
+      <view 
+        wx:else 
+        class="message ai-msg" 
+        id="msg-{{index}}"
+      >
+        <image 
+          src="/images/diy-bot.png" 
+          class="avatar"
+        ></image>
+        <view class="bubble-wrap">
+          <view class="bubble">{{item.content}}</view>
+          <view class="time">{{item.time}}</view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+
+  <!-- 输入区 -->
+  <view class="input-box">
+    <input 
+      value="{{inputValue}}"
+      bindinput="onInput"
+      placeholder="输入你的创意想法..."
+      class="input"
+      confirm-type="send"
+      bindconfirm="sendMessage"
+      style="width: 100%" 
+    />
+    <!-- <button 
+      bindtap="sendMessage"
+      class="send-btn"
+      disabled="{{isSending}}"
+    >{{isSending ? '生成中...' : '发送'}}</button> -->
+  </view>
+</view>
