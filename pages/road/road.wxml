@@ -1,2 +1,39 @@
-<!--pages/road/road.wxml-->
-<text>pages/road/road.wxml</text>
+<!-- pages/road/road.wxml -->
+<view class="container">
+  <!-- 地图 -->
+  <map
+    id="map"
+    latitude="{{latitude}}"
+    longitude="{{longitude}}"
+    scale="{{scale}}"
+    show-location
+    markers="{{markers}}"
+    bindmarkertap="onMarkerTap"
+    style="width: 100%; height: 100vh;">
+  </map>
+
+  <!-- 遮罩 -->
+  <view wx:if="{{showPopup}}" class="popup-mask" bindtap="closePopup"></view>
+
+  <!-- 弹窗主体 -->
+  <view wx:if="{{showPopup}}" class="popup-glass" animation="{{popupAnimation}}">
+    <view class="popup-header">
+      <image class="popup-img" src="{{currentLocation.img}}" mode="aspectFill"></image>
+      <view class="popup-info">
+        <view class="popup-title">{{currentLocation.name}}</view>
+        <view class="popup-desc">{{currentLocation.desc}}</view>
+      </view>
+    </view>
+
+    <view class="popup-footer">
+      <button class="btn-detail" bindtap="goToDetail">了解更多</button>
+    </view>
+  </view>
+
+  <!-- 回到当前位置按钮 -->
+  <view class="location-btn" bindtap="backToCurrentLocation">
+    <image src="/images/locate_icon.png" mode="aspectFit" class="location-icon" />
+  </view>
+
+
+</view>

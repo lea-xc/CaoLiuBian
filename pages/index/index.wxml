@@ -1,5 +1,5 @@
 <!-- pages/index/index.wxml -->
-<view class="container">
+<view class="container" style="background-image: url('/images/bk/首页底图.png');">
   <!-- 顶部区域 -->
   <view class="header">
     <view class="left-header">

@@ -1,5 +1,5 @@
 <!-- pages/gallery/gallery.wxml -->
-<view class="container" style="background-image: url('/images/icon/匠心日用文字底.png');">
+<view class="container" style="background-image: url('/images/bk/匠心日用文字底.png');">
 <view class="image-grid">
   <block wx:for="{{imageList}}" wx:for-item="item" wx:key="id">
     <view class="image-row">

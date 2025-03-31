@@ -4,12 +4,12 @@ Page({
       searchValue: '', // 搜索关键词
       searchHistory: [], // 搜索历史
       sections: [
-        { id:2, icon: '/images/icon/匠.png', url: '/pages/JiangXin/JiangXin' },
+        { id:2, icon: '/images/icon/匠.png', url: '/pages/index/JiangXin/JiangXin' },
         { id:4, icon: '/images/icon/艺.png', url: '#4' },
         { id:1, icon: '/images/icon/非.png', url: '#1' },
         { id:6, icon: '/images/icon/指.png', url: '#6' },
         { id:3, icon: '/images/icon/千.png', url: '#3' },
-        { id:5, icon: '/images/icon/匠_1.png', url: '/pages/JiangRen/JiangRen' }
+        { id:5, icon: '/images/icon/匠_1.png', url: '/pages/index/JiangRen/JiangRen' }
       ]
     },
     navigateTo: function(e) {

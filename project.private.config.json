@@ -3,7 +3,7 @@
   "projectname": "CaoLiuBian",
   "setting": {
     "compileHotReLoad": true,
-    "urlCheck": false
+    "bigPackageSizeSupport": true
   },
   "libVersion": "trial"
 }

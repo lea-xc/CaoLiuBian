@@ -14,7 +14,7 @@ Page({
         return {
           id: item.id,
           image: item.image,
-          url: '/pages/Cao_item/Cao_item?index=' + item.id // 假设这是详情页的路径，并传递id
+          url: '/pages/index/JiangXin/Cao_item/Cao_item?index=' + item.id // 假设这是详情页的路径，并传递id
         };
       });
       this.setData({

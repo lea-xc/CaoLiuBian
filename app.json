@@ -5,9 +5,17 @@
     "pages/person/person",
     "pages/road/road",
     "pages/DIY/DIY",
-    "pages/Cao_item/Cao_item",
-    "pages/JiangXin/JiangXin",
-    "pages/JiangRen/JiangRen",
+    "pages/index/JiangXin/Cao_item/Cao_item",
+    "pages/index/JiangXin/JiangXin",
+    "pages/index/JiangRen/JiangRen",
+    "pages/detail/madahu/madahu",
+    "pages/detail/bowuguan/bowuguan",
+    "pages/detail/xingguosi/xingguosi",
+    "pages/detail/senlingongyuan/senlingongyuan",
+    "pages/detail/gongfang/gongfang",
+    "pages/detail/wenhuachanyeyuan/wenhuachanyeyuan",
+    "pages/detail/jidi/jidi",
+    "pages/detail/shiji/shiji",
     "pages/logs/logs"
   ],
   "window": {
@@ -48,6 +56,11 @@
         "iconPath": "images/icon/DIY.png"
       }
     ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "申请获取位置信息"
+    }
   },
   "style": "v2",
   "componentFramework": "glass-easel",
