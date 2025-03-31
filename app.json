@@ -5,6 +5,9 @@
     "pages/person/person",
     "pages/road/road",
     "pages/DIY/DIY",
+    "pages/Cao_item/Cao_item",
+    "pages/JiangXin/JiangXin",
+    "pages/JiangRen/JiangRen",
     "pages/logs/logs"
   ],
   "window": {
@@ -16,23 +19,33 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text":"主页",
+        "iconPath": "images/icon/主页.png",
+        "selectedIconPath": "images/icon/主页.png"
       },
       {
         "pagePath": "pages/shop/shop",
-        "text": "商城"
+        "text":"商店",
+        "iconPath": "images/icon/商店.png",
+        "selectedIconPath": "images/icon/商店.png"
       },
       {
         "pagePath": "pages/person/person",
-        "text": "个人"
+        "text":"个人",
+        "iconPath": "images/icon/个人.png",
+        "selectedIconPath": "images/icon/个人.png"
       },
       {
         "pagePath": "pages/road/road",
-        "text": "路线"
+        "text":"路线",
+        "selectedIconPath": "images/icon/路线.png",
+        "iconPath": "images/icon/路线.png"
       },
       {
         "pagePath": "pages/DIY/DIY",
-        "text": "DIY"
+        "text":"DIY",
+        "selectedIconPath": "images/icon/DIY.png",
+        "iconPath": "images/icon/DIY.png"
       }
     ]
   },

@@ -122,38 +122,38 @@
 }
 
 /* 输入区样式 */
+.input-bar {
+    display: flex;
+    align-items: center;
+    padding: 20rpx 30rpx;
+    gap: 20rpx; /* 元素间距 */
+  }
 .input-box {
-  position: fixed !important;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-  background: white;
-  border-top: 1rpx solid #eee;
-
-  padding: 20rpx 30rpx;
+  flex: 4; /* 3/4宽度 */
+  height: 80rpx;
+  background: #f5f5f5;
+  border-radius: 40rpx;
   display: flex;
   align-items: center;
-  box-sizing: border-box; 
+  position: relative;
 }
 .input {
   flex: 1;
   /* margin-right: 20rpx; */
-  padding: 16rpx 24rpx;
-  border: 1rpx solid #ddd;
-  border-radius: 8rpx;
+  padding: 12rpx 16rpx;
   font-size: 28rpx;
   margin: 0; 
 }
 
-/* 发送按钮（选用） */
-/* .send-btn {
-  margin: 0;
-  padding: 0 40rpx;
-  height: 72rpx;
-  line-height: 72rpx;
-  background: #4CAF50;
-  color: white;
-  border-radius: 8rpx;
-  font-size: 28rpx;
-} */
+.input-btn {
+    flex: 1; /* 1/4宽度 */
+    max-width: 180rpx;
+    background: #09b367;
+    color: white;
+    font-size: 28rpx;
+    height: 72rpx;
+    line-height: 72rpx;
+    border-radius: 36rpx;
+    margin: 0;
+    padding: 0;
+  }

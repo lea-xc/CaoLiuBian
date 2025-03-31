@@ -1,0 +1,48 @@
+<view class="container">
+    <view class="title-container">
+        <text class="title">{{product.title}}</text>
+    </view>
+
+  <view class="item">
+  <!-- 按钮部分 -->
+  <view class="action-buttons">
+    <button bindtap="likeProduct">👍 点赞</button>
+    <button bindtap="collectProduct">⭐ 收藏</button>
+    <button bindtap="commentProduct">💬 评论</button>
+  </view>
+    <!-- 图片部分 -->
+    <view class="product-image-container">
+    <image class="product-image" src="{{product.image}}" mode="widthFix"></image>
+  </view>
+</view>
+
+<view class="title-container">
+    <text class="title">产品描述 </text>
+</view>
+<view class="description">
+    <text>&nbsp;&nbsp;</text>
+    <text >{{product.description}}</text>
+</view>
+
+
+
+<view class="scene-list">
+    <view class="scene-container">
+        <text class="scene-title">使用场景：</text>
+    </view>
+    <view class="scenes-container">
+        <block wx:for="{{product.scenes}}" wx:key="*this">
+            <view class="scene-item-view">
+                <text class="scene-item">{{item}}</text>
+            </view>
+        </block>
+    </view>
+</view>
+
+
+  </view>
+
+  <view class="buy-section">
+    <button bindtap="buyNow">🛒 立即购买</button>
+    <button bindtap="addToCart">➕ 加入购物车</button>
+  </view>

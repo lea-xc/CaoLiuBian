@@ -1,0 +1,42 @@
+.container {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: 24px;
+    color: #fff;
+}
+
+.content {
+    padding: 20px;
+    text-align: justify;
+}
+
+.image {
+    width: 290rpx; /* 调整图片宽度 */
+    height: auto;
+    margin-top: 10rpx;
+    margin-bottom: 5rpx;
+    float: left; /* 将图片浮动到左边 */
+    margin-right: 20px; /* 图片与文字之间的间距 */
+}
+
+.paragraph {
+    font-size: 30rpx; /* 控制文字大小 */
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.image-with-text {
+    overflow: auto; /* 确保图片和文字在同一行 */
+}

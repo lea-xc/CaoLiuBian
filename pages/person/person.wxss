@@ -1,1 +1,92 @@
-/* pages/person/person.wxss */
+.container {
+    background-color: #e0f8d8;
+    padding: 10px;
+  }
+  
+  .top-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .nickname {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .edit-btn {
+    margin-left: auto;
+    background-color: transparent;
+    border: none;
+    color: #666;
+  }
+  
+  .orders-section,
+  .after-sales-section,
+  .middle-section {
+    margin-bottom: 20px;
+  }
+  
+  .section-title {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .order-icons {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .icon-item {
+    text-align: center;
+  }
+  
+  .icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+  }
+  
+  .block {
+    background-color: #aee2a1;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+  }
+
+  .middle-section {
+    display: flex; /* 使用flex布局使子元素横向分布 */
+    justify-content: space-around; /* 平均分布子元素 */
+    align-items: center; /* 垂直居中 */
+  }
+  
+  .block {
+    width: 45%; /* 设置宽度，两个区块加起来为90%，留出10%的间隔 */
+    text-align: center; /* 文字居中 */
+    padding: 10px; /* 内边距 */
+    border: 1px solid #008000; /* 边框 */
+    border-radius: 5px; /* 圆角边框 */
+    /* 高度可以根据需要调整，以下为示例高度 */
+    height: 100px; /* 设置高度 */
+    line-height: 100px; /* 设置行高与高度一致，实现垂直居中 */
+  }
+  
+  /* 可以添加额外的样式来区分两个区块 */
+  .cultural-interaction {
+    /* 文化互动区样式 */
+  }
+  
+  .social-sharing {
+    /* 社交分享区样式 */
+  }
+  
+  

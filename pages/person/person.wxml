@@ -1,2 +1,50 @@
-<!--pages/person/person.wxml-->
-<text>pages/person/person.wxml</text>
+<view class="container">
+  <!-- 顶部区域 -->
+  <view class="top-section">
+    <image class="avatar" src="{{userAvatar}}" bindtap="onAvatarTap"></image>
+    <text class="nickname">{{userInfo.nickName}}</text>
+    <button class="edit-btn">编辑资料</button>
+</view>
+
+
+  <!-- 我的订单 -->
+  <view class="orders-section">
+    <text class="section-title">我的订单</text>
+    <view class="order-icons">
+      <view class="icon-item">
+        <image src="/icons/wallet.png" class="icon"></image>
+        <text>待付款</text>
+      </view>
+      <view class="icon-item">
+        <image src="/icons/truck.png" class="icon"></image>
+        <text>待发货</text>
+      </view>
+      <view class="icon-item">
+        <image src="/icons/package.png" class="icon"></image>
+        <text>待收货</text>
+      </view>
+      <view class="icon-item">
+        <image src="/icons/check.png" class="icon"></image>
+        <text>已完成</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 售后与广告语 -->
+  <view class="after-sales-section">
+    <text class="section-title">售后</text>
+    <text class="section-title">广告语</text>
+  </view>
+
+  <!-- 中间部分 -->
+  <view class="middle-section">
+  <navigator url="#" class="block cultural-interaction">
+    文化互动区
+  </navigator>
+  <navigator url="#" class="block social-sharing">
+    社交分享区
+  </navigator>
+</view>
+
+
+</view>

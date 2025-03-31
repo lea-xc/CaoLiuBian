@@ -1,0 +1,21 @@
+/* pages/gallery/gallery.wxss */
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .image-row {
+    width: 48%; /* 两列，每列占48%，留出4%的间隔 */
+    margin-bottom: 10px; /* 图片之间的间隔 */
+  }
+  
+  .image {
+    width: 100%; /* 图片宽度占满容器 */
+    height: 400rpx; /* 高度自适应 */
+  }
+  
+  .link {
+    display: block; /* 使navigator占满整个image容器 */
+  }
+  

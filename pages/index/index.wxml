@@ -39,13 +39,19 @@
   <!-- 功能分区 -->
   <view class="function-area">
     <view class="section">
-      <text class="section-title">非遗文化展示区</text>
-      <view class="content-placeholder"></view>
+    <text class="section-title">非遗文化展示区</text>
+    <view class="image-container" style="background-image: url('/images/icon/非遗文化展示区显示框.png');">
+      <!-- 循环渲染图片和导航条 -->
+      <block wx:for="{{sections}}" wx:key="id">
+        <navigator url="{{item.url}}">
+          <image class="section-image" src="{{item.icon}}"></image>
+        </navigator>
+      </block>
     </view>
     
     <view class="section">
       <text class="section-title">非遗商品销售区</text>
-      <navigator url="/pages/shop/shop" open-type="switchTab">
+      <navigator url="/pages/JiangXin/JiangXin" >
         <view class="content-placeholder">
         </view>
       </navigator>
@@ -62,4 +68,5 @@
     </view>
 
   </view>
+</view>
 </view>

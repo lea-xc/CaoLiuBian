@@ -1,0 +1,138 @@
+.container {
+    padding: 20rpx;
+  }
+  /* 设置描述文字的颜色为绿色 */
+
+  
+  /* 设置标题样式，并在后面添加一个绿色的方框 */
+  .title {
+    display: inline-block; /* 使标题可以设置宽度和边框 */
+    position: relative; /* 为方框定位 */
+    padding-right: 20px; /* 为方框留出空间 */
+    font-size: 36rpx;
+    font-weight: bold;
+  }
+  
+  .title-container {
+    padding-top: 80rpx;
+    background-color:lightgreen; 
+    border-radius: 5px; 
+    padding: 10px;
+    }
+  
+  .item {
+    display: flex; /* 设置为flex布局 */
+    flex-direction: row; /* 默认横向排列 */
+  }
+  
+  .product-image-container {
+    width: 500rpx; /* 可以根据需要调整宽度 */
+    height: auto; /* 高度自适应 */
+  }
+  
+  .product-image {
+    width: 100%; /* 图片宽度设置为100% */
+    height: auto; /* 高度自适应 */
+  }
+  
+  .action-buttons {
+    display: flex; /* 设置为flex布局 */
+    flex-direction: column; /* 设置纵向排列 */
+    /* 以下样式可根据需要调整 */
+    margin-left: 10px; /* 左侧外边距 */
+  }
+  
+  /* 可以给按钮添加一些样式，例如间距 */
+  .action-buttons button {
+    width: 100px; /* 设置按钮的宽度 */
+    height: 80px; /* 设置按钮的高度 */
+    padding: 5px; /* 内边距，可以根据需要调整 */
+    font-size: 20px; /* 字体大小，可以根据需要调整 */
+    text-align: center; /* 水平居中文字 */
+    line-height: 80px;  /* 设置行高等于按钮高度，实现垂直居中 */
+    border: none;       /* 如果需要，可以移除边框 */
+    outline: none;      /* 移除点击时的轮廓线 */
+  }
+  
+  
+  .description {
+    color: green;
+    font-size: 36rpx;
+    margin-right:50rpx;
+    margin-left:50rpx;
+    margin-top: 20rpx;
+    margin-bottom: 30rpx;
+  }
+  
+  .scene-list {
+    margin-top: 20rpx;
+  }
+  
+  .scene-title {
+    font-weight: bold;
+  }
+  
+  .scene-item {
+    font-size: 26rpx;
+    margin-top: 10rpx;
+  }
+  
+  .buy-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30rpx;
+  }
+  
+/* 场景列表的基本样式 */
+.scene-list {
+    position: relative; /* 为相对定位的子元素提供参照 */
+    background-color: #f8f9fa; /* 背景色 */
+    border-radius: 10px; /* 边框圆角 */
+    padding: 20px; /* 内边距 */
+    border: 1px solid #ccc; /* 添加边框 */
+  }
+  
+  /* 标题容器的样式 */
+  .scene-container {
+    background-color:lightgreen;
+    border-radius: 10px; 
+    position: absolute; /* 使用绝对定位 */
+    top: -16px; /* 距离顶部20px */
+    right: 10px; /* 距离左边20px */
+    width: 100px; /* 更改宽度 */
+    height:70rpx;
+    /* 其他样式保持不变 */
+  }
+  
+  /* 标题的样式 */
+  .scene-title {
+    font-size: 18px; /* 字体大小 */
+    color: white; /* 文本颜色 */
+    text-align: center;
+    line-height: 70rpx;
+    padding: 10rpx;
+    /* 其他样式保持不变 */
+  }
+
+/* 场景容器的样式 */
+.scenes-container {
+    display: flex; /* 使用flex布局 */
+    justify-content: space-between; /* 水平分布 */
+    flex-wrap: wrap; /* 允许换行 */
+}
+
+/* 单个场景项的样式 */
+.scene-item-view {
+    width: calc(33% - 10px); /* 宽度约为三分之一减去间距 */
+    margin-bottom: 10px; /* 底部外边距 */
+    text-align: center; /* 文本居中 */
+}
+
+/* 场景项文本的样式 */
+.scene-item {
+    font-size: 32rpx; /* 字体大小 */
+     /* 文本颜色 */
+}
+
+  
+  
