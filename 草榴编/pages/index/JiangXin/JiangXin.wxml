@@ -1,0 +1,10 @@
+<!-- pages/gallery/gallery.wxml -->
+    <view class="gallery-container">
+  <view class="masonry-grid">
+    <block wx:for="{{imageList}}" wx:key="id">
+      <navigator url="{{item.url}}" class="art-card">
+        <image src="{{item.image}}" mode="aspectFill" class="art-image"/>
+      </navigator>
+    </block>
+  </view>
+</view>

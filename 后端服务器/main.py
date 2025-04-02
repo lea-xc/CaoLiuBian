@@ -1,42 +1,28 @@
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
-import httpx
+from flask import Flask, send_file, jsonify
 
-app = FastAPI()
+app = Flask(__name__)
 
-# 你的微信小程序的AppID和AppSecret
-APP_ID = '	wx7b3d44b28fe1fb0f'
-APP_SECRET = '151130ccdd3f3fbd5812aacdbd0c51ba'
+@app.route('/images/product/<filename>')
+def get_product_image(filename):
+    return send_file(f'images/product/{filename}', mimetype='image/png')
 
-# 微信登录API URL
-WX_LOGIN_URL = 'https://api.weixin.qq.com/sns/jscode2session'
+@app.route('/images/icon/<filename>')
+def get_icon_image(filename):
+    return send_file(f'images/icon/{filename}', mimetype='image/png')
 
-class LoginRequest(BaseModel):
-    code: str
+@app.route('/images/bk/<filename>')
+def get_bk_image(filename):
+    return send_file(f'images/bk/{filename}', mimetype='image/png')
 
-@app.post("/login/")
-async def login(request: LoginRequest):
-    # 使用微信提供的API来换取openid和session_key
-    params = {
-        'appid': APP_ID,
-        'secret': APP_SECRET,
-        'js_code': request.code,
-        'grant_type': 'authorization_code'
-    }
-    async with httpx.AsyncClient() as client:
-        response = await client.get(WX_LOGIN_URL, params=params)
-        data = response.json()
+@app.route('/images/product_list')
+def get_image_list():
+    # 假设图片URL存储在数据库中
+    image_urls = [
+        'http://127.0.0.1:5000/images/product/',
+        'https://mybackend.com/images/pic2.png',
+        'https://mybackend.com/images/pic3.png'
+    ]
+    return jsonify(image_urls)
 
-    if "errcode" in data:
-        # 登录失败，微信服务器返回错误
-        raise HTTPException(status_code=400, detail=data.get("errmsg"))
-
-    # 登录成功，返回openid和session_key
-    return {
-        "openid": data.get("openid"),
-        "session_key": data.get("session_key")
-    }
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)

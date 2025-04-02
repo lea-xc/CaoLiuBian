@@ -1,4 +1,5 @@
 const zcoze_apikey = 'cvkh92qh1u3c25s943l0';
+var conversation_id=''
 function createConversationRequest() {
     return new Promise((resolve, reject) => {
       wx.request({
@@ -28,13 +29,37 @@ function createConversationRequest() {
       });
     });
   }
+
+  function extractAnswers(sseData) {
+    const regex = /data:data:\s*(\{.*?"answer":\s*".*?".*?\})/g;
+
+    let match;
+    let sentence = '';
+    
+    while ((match = regex.exec(sseData)) !== null) {
+        const jsonStr = match[1];
+        try {
+            const obj = JSON.parse(jsonStr);
+            if (obj.answer) {
+                sentence += obj.answer;
+            }
+        } catch (e) {
+            console.error('JSON解析错误:', e);
+        }
+    }
+    //sentence=sentence.replace(/\n+/g, '\n');
+    console.log('拼接结果:', sentence);
+    return sentence
+   
+    };
+  
 // pages/DIY/DIY.js
 Page({
   data: {
     messages: [],    // 消息数组
     inputValue: '',  // 输入内容
     isSending: false, // 发送状态
-    conversation_id: ''
+    conversation_id:''
   },
 
   // 初始化数据（建议放在生命周期函数前）
@@ -48,9 +73,8 @@ Page({
     this.initChat()
   },
   onLoad: function() {
-    createConversationRequest().then(conversation_id => {
-      this.setData({ conversation_id: conversation_id });
-      console.log(conversation_id)
+    createConversationRequest().then(conversationid => {
+      conversation_id=conversationid
       // 这里可以继续进行聊天操作
     }).catch(err => {
       console.error(err);
@@ -73,16 +97,26 @@ Page({
     this.setData({ inputValue: e.detail.value })
   },
 
-  async sendMessage () {
-    const { inputValue, isSending } = this.data
-    const content = inputValue.trim()
+  async sendMessage() {
+    const { inputValue, isSending } = this.data;
+    console.log(conversation_id);
+    const content = inputValue.trim();
     const newMessage = {
-              role: 'user',
-              content: content,
-              time: this.formatTime(new Date())
-            }
+      role: 'user',
+      content: content,
+      time: this.formatTime(new Date())
+    };
+    this.setData({
+      messages: [...this.data.messages, newMessage],
+      inputValue: '',
+      isSending: true
+    });
+  
+    // 保存 `this` 的引用
+    const that = this;
+  
     return new Promise((resolve, reject) => {
-      let add_response = '';
+      let answer = '';
       wx.request({
         url: 'https://coze.nankai.edu.cn/api/proxy/api/v1/chat_query',
         method: 'POST',
@@ -92,16 +126,27 @@ Page({
         },
         data: JSON.stringify({
           Query: content,
-          AppConversationID: this.conversation_id,
+          AppConversationID: conversation_id,
           AppKey: zcoze_apikey,
           ResponseMode: 'streaming',
           UserID: '321'
         }),
         success(res) {
           if (res.statusCode === 200) {
-            add_response += res.data.answer;
-            console.log(add_response)
-            resolve(add_response);
+            console.log(res.data);
+            answer = extractAnswers(res.data);
+            // 使用保存的 `that` 引用来更新数据
+            that.setData({
+              messages: [
+                ...that.data.messages,
+                {
+                  role: 'ai',
+                  content: answer,
+                  time: that.formatTime(new Date())
+                }
+              ]
+            });
+            resolve(answer);
           } else {
             console.log(`请求失败，状态码：${res.statusCode}`);
             reject(new Error('Failed to chat'));
@@ -113,6 +158,7 @@ Page({
       });
     });
   }
+  
 
   // 发送消息（整合AI交互）
 //   async sendMessage() {
