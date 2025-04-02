@@ -1,0 +1,11 @@
+<!-- pages/YiShu/YiShu.wxml -->
+<view class="container" style="background-image: url('images\bk\艺术之美文字底.png');"></view>
+<view class="gallery-container">
+  <view class="masonry-grid">
+    <block wx:for="{{artList}}" wx:key="id">
+      <navigator url="{{item.url}}" class="art-card">
+        <image src="{{item.image}}" mode="aspectFill" class="art-image"/>
+      </navigator>
+    </block>
+  </view>
+</view>
