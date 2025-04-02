@@ -10,3 +10,15 @@
   </block>
 </view>
 </view>
+
+<!-- pages/YiShu/YiShu.wxml -->
+<view class="gallery-container">
+  <view class="masonry-grid">
+    <block wx:for="{{artList}}" wx:key="id">
+      <navigator url="{{item.url}}" class="art-card">
+        <image src="{{item.image}}" mode="aspectFill" class="art-image"/>
+        <!-- <view class="art-title">{{item.title}}</view> -->
+      </navigator>
+    </block>
+  </view>
+</view>
