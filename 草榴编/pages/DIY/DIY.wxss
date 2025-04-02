@@ -96,7 +96,7 @@
 .ai-msg .bubble {
   background: white;
   border-radius: 24rpx 24rpx 24rpx 4rpx;
-  max-width: calc(100% - 100rpx); /* 总宽度-头像相关空间 */
+  max-width: calc(100% - 300rpx); /* 总宽度-头像相关空间 */
   flex-shrink: 1;                 /* 允许气泡收缩 */
   margin-right: 50rpx;            /* 右侧留空距离加倍 */
   margin-left: 10rpx;
@@ -108,7 +108,7 @@
   padding: 20rpx 28rpx;
   font-size: 28rpx;
   line-height: 1.5;
-  max-width: 600rpx;
+  max-width: 500rpx;
   box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.05);
   word-break: break-word;
 }

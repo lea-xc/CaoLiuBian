@@ -1,4 +1,4 @@
-<view class="container" style="background-image: url('/images/bk/匠人之心文字底.png');">
+<view class="container" style="background-image: url('http://127.0.0.1:5000/images/bk/匠人之心文字底.png');">
     <view class="header">
         <text class="title">非遗展示区</text>
     </view>
@@ -7,7 +7,7 @@
         <text class="paragraph">在黄河泥沙沉积出的文明褶皱里，博兴草柳编的脉络自八千年前便悄然生长。当仰韶文化的陶罐烙下最早的十字编织纹路，黄河先民指尖跃动的经纬，已在蒲草翻飞间编织出农耕文明最初的容器密码。</text>
         <text class="paragraph">商周青铜器的肃穆礼乐声中，草编祭器以柔韧之姿静守宗庙，《考工记》里“草工”的册封，让这项技艺第一次在竹简上刻下官方的文明注脚。敦煌壁画中市集妇人的柳条在千年后依然翻飞，盛唐的香料与茶韵随着海上丝路柳编器皿的弧线，将东方生活美学播撒成永不褪色的文化胎记。</text>
         <view class="image-with-text">
-            <image src="/images/product/资源8.png" class="image" mode="widthFix"></image>
+            <image src="http://127.0.0.1:5000/images/product/资源8.png" class="image" mode="widthFix"></image>
             <text class="paragraph">明清鼎沸的博兴匠巷里，蒸煮杞柳的雾气浸染了七十二道工序的秘辛，《天工开物》的墨迹未干，工匠们已用双色嵌编的万寿纹提篮，在紫禁城的朱墙下叩响贡品之礼。</text>
         </view>
         <text class="paragraph">这项深植于土地的手艺，既守着白柳伏天采伐的时令铁律，又在龟背纹与方胜纹的经纬交错间，将中国人对福寿康宁的祈愿编织成可触摸的符号。当米兰设计周的灯光照亮那些从古老编法中涅槃的现代灯具，草柳编早已超越容器的实用意义，成为黄河三角洲用植物纤维写给世界的立体史诗，每一道挑压转折都是文明掌纹的延续。</text>

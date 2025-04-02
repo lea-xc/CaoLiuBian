@@ -1,5 +1,5 @@
 <!-- pages/index/index.wxml -->
-<view class="container" style="background-image: url('/images/bk/首页底图.png');">
+<view class="container" style="background-image: url('http://127.0.0.1:5000/images/bk/首页底图.png');">
   <!-- 顶部区域 -->
   <view class="header">
     <view class="left-header">
@@ -38,9 +38,10 @@
 
   <!-- 功能分区 -->
   <view class="function-area">
+
     <view class="section">
     <text class="section-title">非遗文化展示区</text>
-    <view class="image-container" style="background-image: url('/images/icon/非遗文化展示区显示框.png');">
+    <view class="image-container" style="background-image: url('http://127.0.0.1:5000/images/icon/非遗文化展示区显示框.png');">
       <!-- 循环渲染图片和导航条 -->
       <block wx:for="{{sections}}" wx:key="id">
         <navigator url="{{item.url}}">

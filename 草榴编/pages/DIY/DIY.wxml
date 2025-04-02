@@ -28,10 +28,10 @@
         class="message ai-msg" 
         id="msg-{{index}}"
       >
-        <image 
+        <!-- <image 
           src="/images/diy-bot.png" 
           class="avatar"
-        ></image>
+        ></image> -->
         <view class="bubble-wrap">
           <view class="bubble">{{item.content}}</view>
           <view class="time">{{item.time}}</view>
