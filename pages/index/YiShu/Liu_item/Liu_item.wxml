@@ -1,0 +1,39 @@
+<!-- pages/YiShu/Liu_item/Liu_item.wxml -->
+<view class="art-container">
+
+  <!-- 主图展示区 -->
+  <view class="hero-section">
+    <image 
+      src="{{artwork.image}}" 
+      mode="aspectFill" 
+      class="main-image"
+      style="transform: rotate({{imageRotate}}deg);"
+    />
+    <view class="gradient-overlay"></view>
+  </view>
+
+  <!-- 艺术文字区 -->
+  <view class="calligraphy-box">
+    <view class="title-wrapper">
+      <text class="chinese-title">{{artwork.title}}</text>
+      <text class="pinyin-title">{{artwork.pinyin || 'FENG QI WU'}}</text>
+    </view>
+
+    <!-- 动态展开的详情 已译注部分-->
+    <view class="art-detail {{isExpanded ? 'expanded' : ''}}">
+      <!-- <scroll-view 
+        scroll-y 
+        class="description-scroll"
+        bindtap="toggleExpand"
+      > -->
+        <text class="poetic-text">{{artwork.description}}</text>
+      <!-- </scroll-view> -->
+      <!-- <view class="expand-indicator">⌵</view> -->
+    </view>
+  </view>
+
+  <!-- 装饰元素 -->
+  <view class="deco-line vertical"></view>
+  <view class="deco-line horizontal"></view>
+</view> -->
+
