@@ -1,7 +1,65 @@
 /* pages/road/road.wxss */
 .container {
+  position: relative;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
+}
+
+/* 小地图容器，右下角 */
+.mini-map-container {
+  position: fixed;
+  width: 200rpx;
+  height: 200rpx;
+  right: 20rpx;
+  bottom: 120rpx; 
+  z-index: 10;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.15);
+  border-radius: 16rpx;
+  overflow: hidden;
+  background: white;
+}
+/* 透明点击区域*/
+.marker-tap-zone {
+  position: absolute;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  background-color: transparent;
+  z-index: 5;
+}
+
+/* 全屏背景图 */
+.route-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.route-image-section {
+  height: 100%;
+  position: relative;
+}
+
+/* 以下每个点的位置根据总图图标微调 */
+.zone-1 { top: 0.1%;  left: 36%;  }
+.zone-2 { top: 14%; right: 38%; }
+.zone-3 { top: 27%; left: 26%; }
+.zone-4 { top: 40%; right: 46%; }
+.zone-5 { top: 54%; right: 8%; }
+.zone-6 { top: 66%; right: 51%; }
+.zone-7 { top: 80%; left: 1%; }
+.zone-8 { top: 93%; right: 1%; }
+
+.route-image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 地图区域 */
+.map-section {
+  height: 40%;
+  position: relative;
 }
 
 .popup-mask {

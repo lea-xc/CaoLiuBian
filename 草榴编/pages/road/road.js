@@ -277,7 +277,18 @@ Page({
       }
     }, 60);
   },
+
+  /**
+   * UI路线图点击
+   */
+  onCustomMarkerTap(e) {
+    const markerId = parseInt(e.currentTarget.dataset.id);
+    this.onMarkerTap({ markerId }); // 伪造一个 markerTap 事件对象
+  },
   
+  /**
+   * 距离计算
+   */
   getDistance(lat1, lon1, lat2, lon2) {
     const rad = deg => deg * Math.PI / 180;
     const R = 6371;

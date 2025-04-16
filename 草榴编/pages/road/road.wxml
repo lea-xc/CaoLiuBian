@@ -1,16 +1,33 @@
 <!-- pages/road/road.wxml -->
 <view class="container">
-  <!-- 地图 -->
-  <map
-    id="map"
-    latitude="{{latitude}}"
-    longitude="{{longitude}}"
-    scale="{{scale}}"
-    show-location
-    markers="{{markers}}"
-    bindmarkertap="onMarkerTap"
-    style="width: 100%; height: 100vh;">
-  </map>
+  <!-- 顶部景区总图 -->
+  <view class="route-image-section">
+    <image src="/images/icon/景区总.png" mode="aspectFit" class="route-image" />
+
+    <!-- 点击区域覆盖在 UI 图上的各地标位置 -->
+    <view class="marker-tap-zone zone-1" data-id="1" bindtap="onCustomMarkerTap"></view>
+    <view class="marker-tap-zone zone-2" data-id="2" bindtap="onCustomMarkerTap"></view>
+    <view class="marker-tap-zone zone-3" data-id="3" bindtap="onCustomMarkerTap"></view>
+    <view class="marker-tap-zone zone-4" data-id="4" bindtap="onCustomMarkerTap"></view>
+    <view class="marker-tap-zone zone-5" data-id="5" bindtap="onCustomMarkerTap"></view>
+    <view class="marker-tap-zone zone-6" data-id="6" bindtap="onCustomMarkerTap"></view>
+    <view class="marker-tap-zone zone-7" data-id="7" bindtap="onCustomMarkerTap"></view>
+    <view class="marker-tap-zone zone-8" data-id="8" bindtap="onCustomMarkerTap"></view>
+  </view>
+
+  <!-- 地图小窗口 -->
+  <view class="mini-map-container">
+    <map
+      id="map"
+      latitude="{{latitude}}"
+      longitude="{{longitude}}"
+      scale="{{scale}}"
+      show-location
+      markers="{{markers}}"
+      bindmarkertap="onMarkerTap"
+      style="width: 100%; height: 100%;">
+    </map>
+  </view>
 
   <!-- 遮罩 -->
   <view wx:if="{{showPopup}}" class="popup-mask" bindtap="closePopup"></view>
@@ -31,9 +48,9 @@
   </view>
 
   <!-- 回到当前位置按钮 -->
-  <view class="location-btn" bindtap="backToCurrentLocation">
+  <!-- <view class="location-btn" bindtap="backToCurrentLocation">
     <image src="/images/locate_icon.png" mode="aspectFit" class="location-icon" />
-  </view>
+  </view> -->
 
 
 </view>
